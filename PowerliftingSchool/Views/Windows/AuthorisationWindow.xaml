@@ -5,18 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PowerliftingSchool.Views.Windows"
         mc:Ignorable="d"
-         Height="493px" Width="871px">
+         Height="650" Width="1100" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height=".2*" />
+            <RowDefinition Height=".15*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        
+
         <!--header-->
         <Rectangle Fill="#FFC11D1D"/>
         <Image HorizontalAlignment="Left" Height="65" Margin="20 0 0 0" Source="\Resources\logo-icon.png"/>
         <Image HorizontalAlignment="Center" Height="50" Source="\Resources\Powerlifting School.png"/>
 
-        <Grid Grid.Row="1" />
+        <Grid Grid.Row="1" >
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resources/background.png"/>
+            </Grid.Background>
+
+            <Border Width="600" Height="450" HorizontalAlignment="Center" VerticalAlignment="Center"  Opacity="0.8" Background="#FFC11D1D">
+                <Border.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="22" />
+                    </Style>
+                </Border.Resources>
+            </Border>
+
+            <Grid Width="570" Height="430">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".9*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                
+                <TextBlock Text="Авторизация" Style="{StaticResource Header}"/>
+                <TextBlock Text="ID:" Grid.Row="1" Style="{StaticResource P}" Margin="140 0 0 0"/>
+                <TextBox Name="IdTb" Grid.Row="2"/>
+                <TextBlock Text="Пароль:" Grid.Row="3" Style="{StaticResource P}" Margin="140 0 0 0"/>
+                <PasswordBox Name="PassTb" Grid.Row="4" Width="300" Height="50"/>
+                <TextBlock Grid.Row="5" FontSize="20" Style="{StaticResource P}" Margin="140 0 0 0">
+                    <Hyperlink Click="Hyperlink_Click" Foreground="White">Забыли пароль?</Hyperlink>
+                </TextBlock>
+                <Button Name="EnterBTn" Content="Войти" Click="EnterBTn_Click" Grid.Row="7"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

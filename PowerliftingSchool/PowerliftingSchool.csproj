@@ -35,8 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,8 +66,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Group.cs">
+      <DependentUpon>PowerliftingSchoolModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PowerliftingSchoolModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PowerliftingSchoolModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PowerliftingSchoolModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PowerliftingSchoolModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PowerliftingSchoolModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Students.cs">
+      <DependentUpon>PowerliftingSchoolModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Timetable.cs">
+      <DependentUpon>PowerliftingSchoolModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <DependentUpon>PowerliftingSchoolModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\AuthorisationWindow.xaml.cs">
       <DependentUpon>AuthorisationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\MenuWindow.xaml.cs">
+      <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +120,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Model\PowerliftingSchoolModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PowerliftingSchoolModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\PowerliftingSchoolModel.edmx.diagram">
+      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -97,7 +142,6 @@
     <Resource Include="Resources\coach3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="Views\Pages\" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +169,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Windows\MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\logo-icon.png" />
@@ -132,6 +180,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\PowerliftingSchoolModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PowerliftingSchoolModel.Context.cs</LastGenOutput>
+      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\PowerliftingSchoolModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
+      <LastGenOutput>PowerliftingSchoolModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

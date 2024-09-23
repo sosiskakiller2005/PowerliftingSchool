@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerliftingSchool.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,23 @@ namespace PowerliftingSchool.Views.Windows
         public AuthorisationWindow()
         {
             InitializeComponent();
+        }
+
+        private void EnterBTn_Click(object sender, RoutedEventArgs e)
+        {
+            string id = IdTb.Text;
+            string password = PassTb.Password;
+            if (AuthoriseHelper.Authorise(id, password))
+            {
+                MenuWindow menuWindow = new MenuWindow();
+                menuWindow.Show();
+                Close();
+            }
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
