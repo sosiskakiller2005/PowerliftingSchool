@@ -1,0 +1,98 @@
+﻿<Window x:Class="PowerliftingSchool.Views.Windows.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PowerliftingSchool.Views.Windows"
+        mc:Ignorable="d"
+             Height="650" Width="1100" 
+    ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".15*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <!--header-->
+        <Rectangle Fill="#FFC11D1D"/>
+        <Image HorizontalAlignment="Left" Height="65" Margin="20 0 0 0" Source="\Resources\logo-icon.png"/>
+        <Image HorizontalAlignment="Center" Height="50" Source="\Resources\Powerlifting School.png"/>
+
+        <!-- #region форма регистрации-->
+        <Grid Name="RegistrationGrid" Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resources/background.png"/>
+            </Grid.Background>
+
+            <Border Width="600" Height="520" HorizontalAlignment="Center" VerticalAlignment="Center"  Opacity="0.8" Background="#FFC11D1D">
+                <Border.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="22" />
+                    </Style>
+                </Border.Resources>
+            </Border>
+
+            <Grid Width="570" Height="500">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".9*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Регистрация" Style="{StaticResource Header}"/>
+                <TextBlock Text="ФИО:" Grid.Row="1" Style="{StaticResource P}" Margin="140 0 0 0"/>
+                <TextBox Name="FullnameTb" Grid.Row="2"/>
+                <TextBlock Text="Почта:" Grid.Row="3" Style="{StaticResource P}" Margin="140 0 0 0"/>
+                <TextBox Name="EmailTb" Grid.Row="4"/>
+                <TextBlock Text="Номер телефона:" Grid.Row="5" Style="{StaticResource P}" Margin="140 0 0 0"/>
+                <TextBox Name="NumberTB" Grid.Row="6"/>
+                <TextBlock Text="Пароль:" Grid.Row="7" Style="{StaticResource P}" Margin="140 0 0 0"/>
+                <PasswordBox Name="PassTb" Grid.Row="8" Width="300" Height="50"/>
+                <TextBlock Grid.Row="9" FontSize="20" Style="{StaticResource P}" Margin="140 0 0 0"><Hyperlink Click="Hyperlink_Click" Foreground="White">Войти</Hyperlink></TextBlock>
+                <Button Name="EnterBTn" Content="Далее" Click="EnterBTn_Click" Grid.Row="710"/>
+            </Grid>
+        </Grid>
+        <!--#endregion-->
+        
+        <!-- #region подтверждение регистрации-->
+        <Grid Name="MessageGrid" Grid.Row="1" Visibility="Collapsed">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resources/background.png"/>
+            </Grid.Background>
+
+            <Border Width="600" Height="520" HorizontalAlignment="Center" VerticalAlignment="Center"  Opacity="0.8" Background="#FFC11D1D">
+                <Border.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="22" />
+                    </Style>
+                </Border.Resources>
+            </Border>
+
+            <Grid Width="570" Height="500">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Вы были зарегистрированы" Style="{StaticResource Header}"/>
+                <TextBlock Text="Ваш ID:" Grid.Row="1" FontSize="30" Style="{StaticResource Header}"/>
+                <TextBlock Name="IdTbl" Grid.Row="2" FontSize="30" Style="{StaticResource Header}"/>
+                <TextBlock Text="Запомните его, чтобы войти в свой профиль в следующий раз" Grid.Row="3" FontSize="15" TextWrapping="Wrap" Width="300" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource Header}"/>
+                
+                <Button Name="OkBtn" Content="Далее" Click="OkBtn_Click" Grid.Row="4" Margin="320 0 0 0"/>
+            </Grid>
+        </Grid>
+        <!--#endregion-->
+    </Grid>
+</Window>
