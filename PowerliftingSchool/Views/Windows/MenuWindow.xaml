@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PowerliftingSchool.Views.Windows"
         mc:Ignorable="d"
-        Title="MenuWindow" Height="450" Width="800">
-    <Grid>
+                 Height="650" Width="1100" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
+    <Grid Name="UserGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".15*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <!--header-->
+        <Rectangle Fill="#FFC11D1D"/>
+        <Image HorizontalAlignment="Left" Height="65" Margin="20 0 0 0" Source="\Resources\logo-icon.png"/>
+        <Image HorizontalAlignment="Center" Height="50" Source="\Resources\Powerlifting School.png"/>
+        <Image x:Name="ProfileImage" Source="{Binding Photo}" Stretch="UniformToFill" HorizontalAlignment="Right" Height="70" Width="70" Margin="0 0 20 0"/>
         
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Resources/background.png"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".2*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="1100">
+                <Border Width="16"/>
+                <Button Name="ProfileBtn" Content="Профиль" Click="ProfileBtn_Click" Background="#FFC11D1D"/>
+                <Border Width="16"/>
+                <Button Name="ReportBTn" Content="Отчеты" Click="ReportBTn_Click" Background="#FFC11D1D"/>
+                <Border Width="16"/>
+                <Button Name="TimetableBtn" Content="Расписание" Click="TimetableBtn_Click" Background="#FFC11D1D"/>
+                <Border Width="16"/>
+                <Button Name="ListsBTn" Content="Списки" Click="ListsBTn_Click" Background="#FFC11D1D"/>
+                <Border Width="16"/>
+                <Button Name="RateBtn" Content="Тарифы" Click="RateBtn_Click" Background="#FFC11D1D"/>
+                <Border Width="16"/>
+            </StackPanel>
+
+            <Frame Name="MainFrm" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+
+        </Grid>
     </Grid>
 </Window>

@@ -34,6 +34,7 @@ namespace PowerliftingSchool.Views.Windows
                 MenuWindow menuWindow = new MenuWindow();
                 menuWindow.Show();
                 Close();
+                FrameHelper.selectedWindow = menuWindow;
             }
         }
 

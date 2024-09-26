@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PowerliftingSchool.AppData;
+using PowerliftingSchool.Views.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,45 @@ namespace PowerliftingSchool.Views.Windows
         public MenuWindow()
         {
             InitializeComponent();
+            ProfilePage profilePage = new ProfilePage();
+            MainFrm.Navigate(profilePage);
+            FrameHelper.selectedFrame = MainFrm;UserGrid.DataContext = AuthoriseHelper.selectedUser;
+            ProfileImage.Visibility = Visibility.Collapsed;
+        }
+
+        private void ProfileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ProfilePage profilePage = new ProfilePage();
+            MainFrm.Navigate(profilePage);
+            ProfileImage.Visibility = Visibility.Collapsed;
+        }
+
+        private void ReportBTn_Click(object sender, RoutedEventArgs e)
+        {
+            ReportsPage reportsPage = new ReportsPage();
+            MainFrm.Navigate(reportsPage);
+            ProfileImage.Visibility = Visibility.Visible;
+        }
+
+        private void TimetableBtn_Click(object sender, RoutedEventArgs e)
+        {
+            TimetablePage timetablePage = new TimetablePage();
+            MainFrm.Navigate(timetablePage);
+            ProfileImage.Visibility = Visibility.Visible;
+        }
+
+        private void ListsBTn_Click(object sender, RoutedEventArgs e)
+        {
+            ListsPage listsPage = new ListsPage();
+            MainFrm.Navigate(listsPage);
+            ProfileImage.Visibility = Visibility.Visible;
+        }
+
+        private void RateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            RatePage ratePage = new RatePage();
+            MainFrm.Navigate(ratePage);
+            ProfileImage.Visibility = Visibility.Visible;
         }
     }
 }

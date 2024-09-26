@@ -1,0 +1,24 @@
+﻿<Page x:Class="PowerliftingSchool.Views.Pages.ListsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PowerliftingSchool.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="434" d:DesignWidth="1100"
+      Title="ListsPage">
+
+    <Grid>
+        <ListView Name="StudentsLv">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding Lastname}"/>
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding Surname}"/>
+                    <GridViewColumn Header="Дата рождения" DisplayMemberBinding="{Binding Birthday, StringFormat={}{0:dd.MM.yyy}}"/>
+                    <GridViewColumn Header="Группа" DisplayMemberBinding="{Binding Group.Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>
