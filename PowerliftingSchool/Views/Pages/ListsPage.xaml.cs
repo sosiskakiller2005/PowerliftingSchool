@@ -1,4 +1,5 @@
-﻿using PowerliftingSchool.Model;
+﻿using PowerliftingSchool.AppData;
+using PowerliftingSchool.Model;
 using PowerliftingSchool.Views.Windows;
 using System;
 using System.Collections.Generic;
@@ -49,6 +50,10 @@ namespace PowerliftingSchool.Views.Pages
                 {
                     StudentsLv.ItemsSource = App.GetContext().Students.ToList();
                 }
+            }
+            else
+            {
+                MessageBoxHelper.Error("Выберите ученика.");
             }
         }
     }

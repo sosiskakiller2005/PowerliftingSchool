@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PowerliftingSchool.Views.Windows"
         mc:Ignorable="d" Height="500" Width="800"
-        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFC11D1D">
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFC11D1D" WindowStyle="None">
     <Grid x:Name="UserGrid" Margin="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width=".8*" />
@@ -23,7 +23,6 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="20" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
         <TextBlock Text="Фамилия:" Style="{StaticResource P}"/>
@@ -36,6 +35,8 @@
         <DatePicker Name="BirthdayDp" Grid.Row="6" Grid.Column="2"/>
         <TextBlock Text="Группа:" Grid.Row="8" Style="{StaticResource P}"/>
         <ComboBox Name="GroupCmb" Grid.Row="8" Grid.Column="2"/>
-
+        <Button Name="AddBtn" Content="Добавить" Click="AddBtn_Click" Grid.Row="10" Grid.Column="20" Margin="100 0 0 0"/>
+        <Button Name="EditBtn" Content="Изменить" Click="EditBtn_Click" Grid.Row="10" Grid.Column="20" Margin="100 0 0 0"/>
+        <Button Name="BackBtn" Content="Назад" Click="BackBtn_Click" Grid.Row="10" Margin="0 0 0 0" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
