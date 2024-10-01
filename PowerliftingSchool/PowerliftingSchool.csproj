@@ -109,6 +109,9 @@
     <Compile Include="Views\Pages\TimetablePage.xaml.cs">
       <DependentUpon>TimetablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Windows\AddEditStudentWindow.xaml.cs">
+      <DependentUpon>AddEditStudentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\AuthorisationWindow.xaml.cs">
       <DependentUpon>AuthorisationWindow.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\DatePickerStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\HyperlinkStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\ListViewStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +217,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Windows\AddEditStudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows\AuthorisationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -237,6 +252,8 @@
       <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
       <LastGenOutput>PowerliftingSchoolModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\dumbell-icon.png" />
+    <Resource Include="Resources\Arrow-icon.png" />
     <Resource Include="Resources\Снимок экрана %28182%29.png" />
     <Resource Include="Resources\exit-icon.png" />
   </ItemGroup>

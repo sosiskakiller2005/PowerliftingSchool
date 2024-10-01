@@ -58,6 +58,7 @@
         </Border>
         <!--#endregion-->
         
+        <!--#region Статистика-->
         <Grid Grid.Row="1" Width="400" Height="210">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
@@ -84,5 +85,6 @@
             
             
         </Grid>
+        <!--#endregion-->
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerliftingSchool.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,16 @@ namespace PowerliftingSchool.Views.Pages
     /// </summary>
     public partial class ReportsPage : Page
     {
+        public static PowerliftingSchoolDbEntities _context = App.GetContext();
         public ReportsPage()
         {
             InitializeComponent();
+            GroupsLb.ItemsSource = _context.Group.ToList();
+        }
+
+        private void GroupsLb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

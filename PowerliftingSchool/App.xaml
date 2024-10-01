@@ -13,6 +13,9 @@
                 <ResourceDictionary Source="Styles\ComboBoxStyle.xaml"/>
                 <ResourceDictionary Source="Styles\ListViewStyle.xaml"/>
                 <ResourceDictionary Source="Styles\PasswordBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles\HyperlinkStyle.xaml"/>
+                <ResourceDictionary Source="Styles\DatePickerSTyle.xaml"/>
+                <ResourceDictionary Source="Styles\ComboBoxStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PowerliftingSchool.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace PowerliftingSchool.Views.Pages
     /// </summary>
     public partial class TimetablePage : Page
     {
+        private static PowerliftingSchoolDbEntities _context = App.GetContext();
         public TimetablePage()
         {
             InitializeComponent();
+            TimeTableLv.ItemsSource = _context.Timetable.ToList();
         }
     }
 }

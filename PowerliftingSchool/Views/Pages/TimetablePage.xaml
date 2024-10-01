@@ -8,7 +8,15 @@
       d:DesignHeight="434" d:DesignWidth="1100"
       Title="TimetablePage">
 
-    <Grid>
-        
+    <Grid Margin="20">
+        <ListView Name="TimeTableLv">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding DateTime, StringFormat= dd.MM.yyy}"/>
+                    <GridViewColumn Header="Время" DisplayMemberBinding="{Binding DateTime, StringFormat= HH:mm}"/>
+                    <GridViewColumn Header="Группа" DisplayMemberBinding="{Binding Group.Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>
