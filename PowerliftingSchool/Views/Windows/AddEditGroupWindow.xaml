@@ -1,0 +1,39 @@
+﻿<Window x:Class="PowerliftingSchool.Views.Windows.AddEditGroupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PowerliftingSchool.Views.Windows"
+        mc:Ignorable="d"
+        Title="Добавить/редактировать группу" Height="300" Width="650"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10" Name="UserGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".15*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="TitleTbl" Text="Данные группы" FontSize="25" HorizontalAlignment="Center"/>
+
+        <Grid Grid.Row="1" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+                <TextBlock Text="Название группы:" FontSize="25" Height="50"/>
+                <Border Height="10"/>
+                <TextBlock Text="Тренер:" FontSize="25" Height="50"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBox Name="NameTb" Text="{Binding Name}" BorderBrush="Black" BorderThickness="1"/>
+                <Border Height="10"/>
+                <ComboBox Name="UserCmb" SelectedItem="{Binding User}"/>
+                <Border Height="10"/>
+                <Button Name="AddBtn" Content="Добавить" Click="AddBtn_Click"/>
+                <Button Name="EditBtn" Content="Изменить" Click="EditBtn_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

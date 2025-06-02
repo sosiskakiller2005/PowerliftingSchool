@@ -9,12 +9,13 @@
       Title="TimetablePage">
 
     <Grid Margin="20">
-        <ListView Name="TimeTableLv">
+        <ListView Name="TimeTableLv" Width="800">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Дата" DisplayMemberBinding="{Binding DateTime, StringFormat= dd.MM.yyy}"/>
                     <GridViewColumn Header="Время" DisplayMemberBinding="{Binding DateTime, StringFormat= HH:mm}"/>
                     <GridViewColumn Header="Группа" DisplayMemberBinding="{Binding Group.Name}"/>
+                    <GridViewColumn Header="Тренер" DisplayMemberBinding="{Binding Group.User.Fullname}"/>
                 </GridView>
             </ListView.View>
         </ListView>

@@ -109,6 +109,9 @@
     <Compile Include="Views\Pages\TimetablePage.xaml.cs">
       <DependentUpon>TimetablePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Windows\AddEditGroupWindow.xaml.cs">
+      <DependentUpon>AddEditGroupWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\AddEditStudentWindow.xaml.cs">
       <DependentUpon>AddEditStudentWindow.xaml</DependentUpon>
     </Compile>
@@ -163,7 +166,18 @@
     <Resource Include="Resources\coach2.jpg" />
     <Resource Include="Resources\coach3.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\PowerliftingSchoolModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
+      <LastGenOutput>PowerliftingSchoolModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\PowerliftingSchoolModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
+      <LastGenOutput>PowerliftingSchoolModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Styles\ButtonStyle.xaml">
       <SubType>Designer</SubType>
@@ -217,6 +231,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Windows\AddEditGroupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows\AddEditStudentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -242,16 +260,6 @@
     <Resource Include="Resources\background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\PowerliftingSchoolModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PowerliftingSchoolModel.Context.cs</LastGenOutput>
-      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\PowerliftingSchoolModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PowerliftingSchoolModel.edmx</DependentUpon>
-      <LastGenOutput>PowerliftingSchoolModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\dumbell-icon.png" />
     <Resource Include="Resources\Arrow-icon.png" />
     <Resource Include="Resources\Снимок экрана %28182%29.png" />

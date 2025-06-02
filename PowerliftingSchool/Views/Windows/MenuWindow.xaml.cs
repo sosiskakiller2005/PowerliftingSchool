@@ -28,6 +28,7 @@ namespace PowerliftingSchool.Views.Windows
             MainFrm.Navigate(profilePage);
             FrameHelper.selectedFrame = MainFrm;UserGrid.DataContext = AuthoriseHelper.selectedUser;
             ProfileImage.Visibility = Visibility.Collapsed;
+            ProfileBtn.Opacity = 0.5;
         }
 
         private void ProfileBtn_Click(object sender, RoutedEventArgs e)
@@ -35,6 +36,12 @@ namespace PowerliftingSchool.Views.Windows
             ProfilePage profilePage = new ProfilePage();
             MainFrm.Navigate(profilePage);
             ProfileImage.Visibility = Visibility.Collapsed;
+            ProfileBtn.Opacity = 0.5;
+            ReportBTn.Opacity = 1;
+            TimetableBtn.Opacity = 1;
+            ListsBTn.Opacity = 1;
+            ReportBTn.Opacity = 1;
+            RateBtn.Opacity = 1;
         }
 
         private void ReportBTn_Click(object sender, RoutedEventArgs e)
@@ -42,6 +49,11 @@ namespace PowerliftingSchool.Views.Windows
             ReportsPage reportsPage = new ReportsPage();
             MainFrm.Navigate(reportsPage);
             ProfileImage.Visibility = Visibility.Visible;
+            ProfileBtn.Opacity = 1;
+            ReportBTn.Opacity = 0.5;
+            TimetableBtn.Opacity = 1;
+            ListsBTn.Opacity = 1;
+            RateBtn.Opacity = 1;
         }
 
         private void TimetableBtn_Click(object sender, RoutedEventArgs e)
@@ -49,6 +61,12 @@ namespace PowerliftingSchool.Views.Windows
             TimetablePage timetablePage = new TimetablePage();
             MainFrm.Navigate(timetablePage);
             ProfileImage.Visibility = Visibility.Visible;
+            ProfileBtn.Opacity = 1;
+            ReportBTn.Opacity = 1;
+            TimetableBtn.Opacity = 0.5;
+            ListsBTn.Opacity = 1;
+            ReportBTn.Opacity = 1;
+            RateBtn.Opacity = 1;
         }
 
         private void ListsBTn_Click(object sender, RoutedEventArgs e)
@@ -56,6 +74,12 @@ namespace PowerliftingSchool.Views.Windows
             ListsPage listsPage = new ListsPage();
             MainFrm.Navigate(listsPage);
             ProfileImage.Visibility = Visibility.Visible;
+            ProfileBtn.Opacity = 1;
+            ReportBTn.Opacity = 1;
+            TimetableBtn.Opacity = 1;
+            ListsBTn.Opacity = 0.5;
+            ReportBTn.Opacity = 1;
+            RateBtn.Opacity = 1;
         }
 
         private void RateBtn_Click(object sender, RoutedEventArgs e)
@@ -63,6 +87,12 @@ namespace PowerliftingSchool.Views.Windows
             RatePage ratePage = new RatePage();
             MainFrm.Navigate(ratePage);
             ProfileImage.Visibility = Visibility.Visible;
+            ProfileBtn.Opacity = 1;
+            ReportBTn.Opacity = 1;
+            TimetableBtn.Opacity = 1;
+            ListsBTn.Opacity = 1;
+            ReportBTn.Opacity = 1;
+            RateBtn.Opacity = 0.5;
         }
     }
 }

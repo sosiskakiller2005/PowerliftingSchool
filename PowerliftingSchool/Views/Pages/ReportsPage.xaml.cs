@@ -1,4 +1,6 @@
-﻿using PowerliftingSchool.Model;
+﻿using PowerliftingSchool.AppData;
+using PowerliftingSchool.Model;
+using PowerliftingSchool.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,9 +30,26 @@ namespace PowerliftingSchool.Views.Pages
             GroupsLb.ItemsSource = _context.Group.ToList();
         }
 
-        private void GroupsLb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void AddGroupBtn_Click(object sender, RoutedEventArgs e)
         {
+            AddEditGroupWindow addEditGroupWindow = new AddEditGroupWindow();
+            if (addEditGroupWindow.ShowDialog() == true)
+            {
+                GroupsLb.ItemsSource = App.GetContext().Group.ToList();
+            }
+        }
 
+        private void GroupsLb_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectedGroup = GroupsLb.SelectedItem as Group;
+            if (selectedGroup == null)
+                MessageBoxHelper.Error("Выберите группу для редактирования");
+
+            AddEditGroupWindow addEditGroupWindow = new AddEditGroupWindow(selectedGroup);
+            if (addEditGroupWindow.ShowDialog() == true)
+            {
+                GroupsLb.ItemsSource = App.GetContext().Group.ToList();
+            }
         }
     }
 }

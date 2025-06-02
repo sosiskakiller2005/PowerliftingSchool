@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PowerliftingSchool.Views.Windows"
         mc:Ignorable="d"
          Height="650" Width="1100" 
-        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" >
+         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height=".15*" />

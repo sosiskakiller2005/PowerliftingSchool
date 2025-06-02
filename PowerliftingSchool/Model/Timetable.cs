@@ -15,7 +15,7 @@ namespace PowerliftingSchool.Model
     public partial class Timetable
     {
         public int Id { get; set; }
-        public string DateTime { get; set; }
+        public System.DateTime DateTime { get; set; }
         public int GroupId { get; set; }
     
         public virtual Group Group { get; set; }

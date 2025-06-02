@@ -10,13 +10,6 @@
 
     <Grid>
         <Border Grid.Row="1" Width="1000" Height="450" HorizontalAlignment="Center" VerticalAlignment="Center"  Opacity="0.8" Background="#FFC11D1D">
-            <Border.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="22" />
-                </Style>
-            </Border.Resources>
-        </Border>
-
         <ListView Name="StudentsLv" Width="900" Height="300" VerticalAlignment="Top" Margin="0 30 0 0">
             <ListView.View>
                 <GridView>
@@ -28,6 +21,13 @@
                 </GridView>
             </ListView.View>
         </ListView>
+            <Border.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="22" />
+                </Style>
+            </Border.Resources>
+        </Border>
+
         <Button Name="AddBtn" Content="Добавить" Click="AddBtn_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 350 30"/>
         <Button Name="EditBtn" Content="Изменить" Click="EditBtn_Click" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 100 30"/>
     </Grid>

@@ -7,5 +7,6 @@
         <Setter Property="FontSize" Value="25" />
         <Setter Property="Width" Value="200" />
         <Setter Property="Height" Value="50" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
     </Style>
 </ResourceDictionary>
