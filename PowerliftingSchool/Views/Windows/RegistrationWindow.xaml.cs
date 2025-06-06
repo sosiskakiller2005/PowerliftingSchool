@@ -46,6 +46,10 @@ namespace PowerliftingSchool.Views.Windows
                 try
                 {
                     _context.SaveChanges();
+                    MessageBoxHelper.Information("Регистрация успешна!");
+                    AuthorisationWindow authorisationWindow = new AuthorisationWindow();
+                    authorisationWindow.Show();
+                    Close();
                 }
                 catch (DbEntityValidationException ex)
                 {

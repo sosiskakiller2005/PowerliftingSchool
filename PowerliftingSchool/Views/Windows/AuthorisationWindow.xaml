@@ -51,7 +51,7 @@
                 <TextBlock Grid.Row="5" FontSize="20" Style="{StaticResource P}" Margin="140 0 0 0">
                     <Hyperlink Click="Hyperlink_Click" Foreground="White">Забыли пароль?</Hyperlink>
                 </TextBlock>
-                <Button Name="EnterBTn" Content="Войти" Click="EnterBTn_Click" Grid.Row="7"/>
+                <Button Name="EnterBTn" Content="Авторизоваться" Click="EnterBTn_Click" Grid.Row="7"/>
             </Grid>
         </Grid>
     </Grid>

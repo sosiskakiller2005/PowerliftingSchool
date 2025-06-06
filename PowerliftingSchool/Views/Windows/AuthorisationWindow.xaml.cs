@@ -31,6 +31,7 @@ namespace PowerliftingSchool.Views.Windows
             string password = PassTb.Password;
             if (AuthoriseHelper.Authorise(id, password))
             {
+                MessageBoxHelper.Information("Вы успешно авторизовались");
                 MenuWindow menuWindow = new MenuWindow();
                 menuWindow.Show();
                 Close();
